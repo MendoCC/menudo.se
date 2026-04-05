@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menudo Consulting AB — Data, Analytics & Software</title>
+    <meta name="description" content="Menudo Consulting AB is a Swedish technology consultancy specializing in data analytics, software development, and digital solutions for enterprise clients.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #FAFAFA;
+            color: #1A1A1A;
+            line-height: 1.7;
+        }
+
+        /* Nav */
+        nav {
+            padding: 24px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: #1A1A1A;
+            text-decoration: none;
+        }
+        .logo span { color: #666; font-weight: 400; }
+        nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            margin-left: 32px;
+        }
+        nav a:hover { color: #1A1A1A; }
+
+        /* Hero */
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 40px 60px;
+        }
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 300;
+            line-height: 1.3;
+            max-width: 700px;
+        }
+        .hero h1 strong {
+            font-weight: 600;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin-top: 24px;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        /* Divider */
+        .divider {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        .divider hr {
+            border: none;
+            border-top: 1px solid #E0E0E0;
+        }
+
+        /* Services */
+        .services {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        .services-label {
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 40px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        .service h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .service p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Products */
+        .products {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        .products-label {
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 40px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        .product {
+            background: #FFF;
+            border: 1px solid #E8E8E8;
+            border-radius: 8px;
+            padding: 32px;
+            transition: box-shadow 0.2s;
+        }
+        .product:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .product h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .product .tag {
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .product p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+            margin-top: 12px;
+        }
+        .product a {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 14px;
+            color: #1A1A1A;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .product a:hover { text-decoration: underline; }
+
+        /* About */
+        .about {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        .about h2 {
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+        }
+        .about .detail {
+            font-size: 14px;
+            color: #888;
+            margin-top: 16px;
+        }
+
+        /* Contact */
+        .contact {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 40px 40px;
+        }
+        .contact h2 {
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .contact p {
+            font-size: 15px;
+            color: #555;
+        }
+        .contact a {
+            color: #1A1A1A;
+            text-decoration: none;
+        }
+        .contact a:hover { text-decoration: underline; }
+
+        /* Footer */
+        footer {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px;
+            border-top: 1px solid #E0E0E0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer p {
+            font-size: 13px;
+            color: #AAA;
+        }
+        footer a {
+            color: #999;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; gap: 32px; }
+            nav { padding: 20px 24px; }
+            .hero, .services, .products, .about, .contact { padding-left: 24px; padding-right: 24px; }
+            footer { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">Menudo <span>Consulting</span></a>
+        <div>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>We build <strong>data-driven solutions</strong> for enterprises that need to move fast.</h1>
+        <p>Menudo Consulting AB is a Swedish technology consultancy working with banks, insurance companies, and government agencies on data analytics, software development, and digital transformation.</p>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="services" id="services">
+        <p class="services-label">What We Do</p>
+        <div class="services-grid">
+            <div class="service">
+                <h3>Data & Analytics</h3>
+                <p>Data pipelines, warehousing, BI dashboards, and advanced analytics. From raw data to actionable insights for regulated industries.</p>
+            </div>
+            <div class="service">
+                <h3>Software Development</h3>
+                <p>Full-stack development of web applications, mobile apps, and backend systems. Modern architectures built for scale and compliance.</p>
+            </div>
+            <div class="service">
+                <h3>Digital Signing & Agreements</h3>
+                <p>BankID-authenticated digital agreements, forms, and document workflows for Swedish organizations.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="products" id="products">
+        <p class="products-label">Our Products</p>
+        <div class="product-grid">
+            <div class="product">
+                <h3>Paqtify</h3>
+                <div class="tag">Digital Agreements Platform</div>
+                <p>Digital signing platform with BankID authentication and Swish payments. Multi-language templates for schools, municipalities, and businesses.</p>
+                <a href="https://paqtify.com">paqtify.com →</a>
+            </div>
+            <div class="product">
+                <h3>Redbook</h3>
+                <div class="tag">Audio CD Player for Android</div>
+                <p>The first bit-perfect USB CD player for Android. Connect a USB drive, insert a disc, and experience uncompressed 16-bit/44.1kHz audio.</p>
+                <a href="https://redbookaudioplayer.com">redbookaudioplayer.com →</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div>
+                <h2>About</h2>
+                <p>Founded in Täby, Sweden, Menudo Consulting AB has been delivering technology solutions to enterprise clients since 2013. We work with some of Sweden's largest financial institutions and government agencies.</p>
+                <p class="detail">Org.nr 556896-1758 · Täby, Sweden</p>
+            </div>
+            <div>
+                <h2>Clients & Industries</h2>
+                <p>Banking & financial services, insurance, government agencies, municipalities, and education. Our solutions meet the compliance and security requirements of regulated industries.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <p>Federico Gonzalez</p>
+        <p><a href="mailto:federico@gonzalez.se">federico@gonzalez.se</a></p>
+        <p style="margin-top: 8px; color: #AAA; font-size: 14px;">Estrids väg 1, 187 72 Täby, Sweden</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Menudo Consulting AB</p>
+        <a href="#services">Services</a>
+    </footer>
+
+</body>
+</html>
